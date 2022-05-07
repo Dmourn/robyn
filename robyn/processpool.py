@@ -74,5 +74,8 @@ def spawn_process(
             web_socket.methods["message"],
         )
 
+    print("\033[92mStarting Server\033[0m")
     server.start(socket, workers)
+    print("\033[91m Calling run_forever() after Ctrl-C\033[0m")
     asyncio.get_event_loop().run_forever()
+    print("\033[91m DEAD CODE\033[0m run_forever() called ")
